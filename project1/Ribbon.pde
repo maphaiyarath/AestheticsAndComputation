@@ -1,5 +1,5 @@
 class Ribbon {
-  int x, y, xOff, yOff;
+  int x, y, xOff, yOff, grayscale;
   
   Ribbon() {
     x = 120;
@@ -11,8 +11,8 @@ class Ribbon {
     this.y = y;
   }
   
-  void display() {
-    stroke (0);
+  void display (int grayscale) {
+    stroke (grayscale);
     strokeWeight (1);
     noFill();
     beginShape();

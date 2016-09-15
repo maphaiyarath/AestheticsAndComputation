@@ -1,6 +1,8 @@
 // line, curve + form
 // Michelle Aphaiyarath
 
+// rotate?
+
 Ribbon ribbon1, r2, r3, r4;
 Ribbon[] ribs, ribs2, ribs3;
 int count;
@@ -10,10 +12,6 @@ float rotSpeed = .5;
 void setup() {
   size (900, 450);
   count = 3;
-  ribbon1 = new Ribbon ();//width / 4, height / 2);
-  r4 = new Ribbon (width / 3, 2 * height / 3);
-  r2 = new Ribbon (2 * width / 3, height / 3);
-  r3 = new Ribbon (2 * width / 3, 2 * height / 3);
   ribs = new Ribbon[count];
   ribs2 = new Ribbon[count];
   ribs3 = new Ribbon[count];
@@ -27,9 +25,9 @@ void setup() {
 void draw() {
   background (255);
   for (int i = 0; i < count; i++) {
-    ribs[i].display();
-    ribs2[i].display();
-    ribs3[i].display();
+    ribs[i].display (0);
+    ribs2[i].display (170);
+    ribs3[i].display (85);
   }
   /*
   pushMatrix();
@@ -56,11 +54,5 @@ void draw() {
   degs += rotSpeed;
   r4.display();
   popMatrix();
-  */
-  /*
-  ribbon1.move();
-  r2.move();
-  r3.move();
-  r4.move();
   */
 }
