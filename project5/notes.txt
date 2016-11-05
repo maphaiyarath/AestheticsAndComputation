@@ -1,0 +1,24 @@
+crawl = 1
+planet = 2 /////
+pilot = 2
+vehicle = 3 /////
+starhip = 3 /////
+people = 5 //////
+film = 7
+
+// opening crawl
+function handleMouseOver(d, i) {
+    // change size if hover
+    d3.select(this).attr ({
+        fill: "orange",
+        r: node_width * 1.5
+    });
+    // text of crawl
+    svg.append("text").attr ({
+    	x: function() {return d.x - 30;},
+    	y: function() {return d.y - 15;}
+	})
+    .text(function() {
+        return [d.x, d.y];
+    });
+}
