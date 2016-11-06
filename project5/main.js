@@ -141,13 +141,13 @@ var nodes = [
 */
 
 var nodes = [
-	{ id: 0, tag: 'films', name: 'The Phantom Menace' },
-	{ id: 1, tag: 'films', name: 'Attack of the Clones' },
-	{ id: 2, tag: 'films', name: 'Revenge of the Sith' },
-	{ id: 3, tag: 'films', name: 'A New Hope' },
-	{ id: 4, tag: 'films', name: 'The Empire Strikes Back' },
-	{ id: 5, tag: 'films', name: 'Return of the Jedi' },
-	{ id: 6, tag: 'films', name: 'The Force Awakens' },
+	{ id: 0, tag: 'films', name: 'The Phantom Menace', target: [104, 128, 143] },
+	{ id: 1, tag: 'films', name: 'Attack of the Clones', target: [104, 112, 120, 128, 143] },
+	{ id: 2, tag: 'films', name: 'Revenge of the Sith', target: [94, 98, 104, 105, 111, 121, 125, 127, 128, 132, 136, 143, 150] },
+	{ id: 3, tag: 'films', name: 'A New Hope', target: [94, 143, 152] },
+	{ id: 4, tag: 'films', name: 'The Empire Strikes Back', target: [96, 105, 115, 131] },
+	{ id: 5, tag: 'films', name: 'Return of the Jedi', target: [104, 105, 109, 128, 143] },
+	{ id: 6, tag: 'films', name: 'The Force Awakens', target: [118] },
 	{ id: 7, tag: 'people', name: 'Ackbar', target: [5, 6] },
 	{ id: 8, tag: 'people', name: 'Adi Gallia', target: [0, 2] },
 	{ id: 9, tag: 'people', name: 'Anakin Skywalker', target: [0, 1, 2] },
@@ -235,6 +235,67 @@ var nodes = [
 	{ id: 91, tag: 'people', name: 'Yarael Poof', target: [0] },
 	{ id: 92, tag: 'people', name: 'Yoda', target: [0, 1, 2, 4, 5] },
 	{ id: 93, tag: 'people', name: 'Zam Wesell', target: [1] },
+	{ id: 94, tag: 'planets', name: 'Alderaan' , target: [2, 3] },
+	{ id: 95, tag: 'planets', name: 'Aleen Minor' , target: [] },
+	{ id: 96, tag: 'planets', name: 'Bespin' , target: [4] },
+	{ id: 97, tag: 'planets', name: 'Bestine IV' , target: [] },
+	{ id: 98, tag: 'planets', name: 'Cato Neimoidia' , target: [2] },
+	{ id: 99, tag: 'planets', name: 'Cerea' , target: [] },
+	{ id: 100, tag: 'planets', name: 'Champala' , target: [] },
+	{ id: 101, tag: 'planets', name: 'Chandrila' , target: [] },
+	{ id: 102, tag: 'planets', name: 'Concord Dawn' , target: [] },
+	{ id: 103, tag: 'planets', name: 'Corellia' , target: [] },
+	{ id: 104, tag: 'planets', name: 'Coruscant' , target: [0, 1, 2, 5] },
+	{ id: 105, tag: 'planets', name: 'Dagobah' , target: [2, 4, 5] },
+	{ id: 106, tag: 'planets', name: 'Dantooine' , target: [] },
+	{ id: 107, tag: 'planets', name: 'Dathomir' , target: [] },
+	{ id: 108, tag: 'planets', name: 'Dorin' , target: [] },
+	{ id: 109, tag: 'planets', name: 'Endor' , target: [5] },
+	{ id: 110, tag: 'planets', name: 'Eriadu' , target: [] },
+	{ id: 111, tag: 'planets', name: 'Felucia' , target: [2] },
+	{ id: 112, tag: 'planets', name: 'Geonosis' , target: [1] },
+	{ id: 113, tag: 'planets', name: 'Glee Anselm' , target: [] },
+	{ id: 114, tag: 'planets', name: 'Haruun Kal' , target: [] },
+	{ id: 115, tag: 'planets', name: 'Hoth' , target: [4] },
+	{ id: 116, tag: 'planets', name: 'Iktotch' , target: [] },
+	{ id: 117, tag: 'planets', name: 'Iridonia' , target: [] },
+	{ id: 118, tag: 'planets', name: 'Jakku' , target: [6] },
+	{ id: 119, tag: 'planets', name: 'Kalee' , target: [] },
+	{ id: 120, tag: 'planets', name: 'Kamino' , target: [1] },
+	{ id: 121, tag: 'planets', name: 'Kashyyyk' , target: [2] },
+	{ id: 122, tag: 'planets', name: 'Malastare' , target: [] },
+	{ id: 123, tag: 'planets', name: 'Mirial' , target: [] },
+	{ id: 124, tag: 'planets', name: 'Mon Cala' , target: [] },
+	{ id: 125, tag: 'planets', name: 'Mustafar' , target: [2] },
+	{ id: 126, tag: 'planets', name: 'Muunilinst' , target: [] },
+	{ id: 127, tag: 'planets', name: 'Mygeeto' , target: [2] },
+	{ id: 128, tag: 'planets', name: 'Naboo' , target: [0, 1, 2, 5] },
+	{ id: 129, tag: 'planets', name: 'Nal Hutta' , target: [] },
+	{ id: 130, tag: 'planets', name: 'Ojom' , target: [] },
+	{ id: 131, tag: 'planets', name: 'Ord Mantell' , target: [4] },
+	{ id: 132, tag: 'planets', name: 'Polis Massa' , target: [2] },
+	{ id: 133, tag: 'planets', name: 'Quermia' , target: [] },
+	{ id: 134, tag: 'planets', name: 'Rodia' , target: [] },
+	{ id: 135, tag: 'planets', name: 'Ryloth' , target: [] },
+	{ id: 136, tag: 'planets', name: 'Saleucami' , target: [2] },
+	{ id: 137, tag: 'planets', name: 'Serenno' , target: [] },
+	{ id: 138, tag: 'planets', name: 'Shili' , target: [] },
+	{ id: 139, tag: 'planets', name: 'Skako' , target: [] },
+	{ id: 140, tag: 'planets', name: 'Socorro' , target: [] },
+	{ id: 141, tag: 'planets', name: 'Stewjon' , target: [] },
+	{ id: 142, tag: 'planets', name: 'Sullust' , target: [] },
+	{ id: 143, tag: 'planets', name: 'Tatooine' , target: [0, 1, 2, 3, 5] },
+	{ id: 144, tag: 'planets', name: 'Tholoth' , target: [] },
+	{ id: 145, tag: 'planets', name: 'Toydaria' , target: [] },
+	{ id: 146, tag: 'planets', name: 'Trandosha' , target: [] },
+	{ id: 147, tag: 'planets', name: 'Troiken' , target: [] },
+	{ id: 148, tag: 'planets', name: 'Tund' , target: [] },
+	{ id: 149, tag: 'planets', name: 'Umbara' , target: [] },
+	{ id: 150, tag: 'planets', name: 'Utapau' , target: [2] },
+	{ id: 151, tag: 'planets', name: 'Vulpter' , target: [] },
+	{ id: 152, tag: 'planets', name: 'Yavin IV' , target: [3] },
+	{ id: 153, tag: 'planets', name: 'Zolan' , target: [] },
+	{ id: 154, tag: 'planets', name: 'unknown' , target: [] },
 
 ];
 
@@ -300,12 +361,10 @@ var links = [];
 var linkedByIndex = {};
 
 // fill links list by connecting each source w/ each of its targets
-for (var i = 0; i < nodes.length; i++) { // iterate over each element in nodes
-	//index_i = i + 1
-	//index_j = j + 1
-	if (nodes[i].target != undefined) { // for each valid <source, target> pair...
-		for (var j = 0; j < nodes[i].target.length; j++) {
-			links.push({
+for (var i = 0; i < nodes.length; i++) {					// iterate over each element in nodes
+	if (nodes[i].target != undefined) {						// for each valid <source, target> pair,
+		for (var j = 0; j < nodes[i].target.length; j++) {	// for each target of the source
+			links.push({									// append pair to links array
 				source: nodes[i],
 				target: nodes[nodes[i].target[j]]
 			})
@@ -313,31 +372,31 @@ for (var i = 0; i < nodes.length; i++) { // iterate over each element in nodes
 	}
 }
 
-// svg image of network graph for html element
+// svg image of network graph for html element 'viz'
 var network = d3.select('#viz')
 	.append('svg')
 	.attr('width', canvas_width)
 	.attr('height', canvas_height)
+	// zoom effect on svg image as whole
 	.append("g")
-    	.call(d3.behavior.zoom().scaleExtent([0.5, 2.5]).on("zoom", zoom))
+    	.call(d3.behavior.zoom().scaleExtent([0.5, 3]).on("zoom", zoom))
   	.append("g");
 
+// not sure about this...
 network.append("rect")
     .attr("class", "overlay")
     .attr("width", canvas_width)
     .attr("height", canvas_height);
 
-//network.style("cursor", "pointer")
-
 // utilize d3's force layout
 var force = d3.layout.force()
 	.nodes(nodes)
 	.links([])
-	.gravity(0.25)				// how fast it snaps back to original position
-	.charge(-750)				// range of distribution over canvas
+	.gravity(0.25)		// how fast it snaps back to original position
+	.charge(-750)		// range of distribution over canvas
 	.size([canvas_width, canvas_height])
 
-// display links
+// display links as lines
 var link = network.selectAll('line')
 	.data(links).enter().append('line')
 	.attr('stroke', palette.sand)
@@ -355,8 +414,8 @@ node.append('circle')
 	.attr('cy', function(d) {return d.y;})
 	.attr('r', node_width)
 	.attr('fill', function(d, i) {
-		if (i >= 49) {return palette.neon_purple}
-		else if ((i >= 7) && (i < 49)) {return palette.mint}
+		if (i >= 94) {return palette.neon_purple}
+		else if ((i >= 7) && (i < 94)) {return palette.mint}
 		else {return palette.hot_pink}
 	})
 	.on("mouseover", set_highlight)
@@ -371,8 +430,8 @@ node.append('text')
 	.attr('font-family', 'Helvetica')
 	.attr('font-stretch', 'ultra-condensed')
 	.attr('fill', function(d, i) {
-		if (i > 48) {return palette.aqua}
-		else if ((i > 6) && (i <= 48)) {return palette.red}
+		if (i >= 94) {return palette.aqua}
+		else if ((i >= 7) && (i < 94)) {return palette.red}
 		else {return palette.white}
 	})
 	.attr('x', function(d, i) {
@@ -394,8 +453,6 @@ node.append('text')
 
 // drag transformation logic
 force.on('tick', function(e) {
-	//if (d3.event.defaultPrevented) return;
-	//d3.event.sourceEvent.stopPropagation();
 	node.attr('transform', function(d, i) {
 		return 'translate('+ d.x +', '+ d.y +')';
 	})
